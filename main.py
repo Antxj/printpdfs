@@ -29,6 +29,7 @@ for filename in os.listdir(folder_path):
                 print(f'Arquivo enviado para impressão: {output_filename}')
                 win32api.ShellExecute(0, "print", output_filepath, None, ".", 0)
 
+
 print('Pronto!')
 
 confirmation = input('Pressione qualquer tecla para encerrar...')
