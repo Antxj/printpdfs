@@ -3,7 +3,7 @@ import PyPDF2
 from pypdf import PdfMerger
 from os import system
 
-system("title " + "Antonio Xara" + "v1.1")
+system("title " + "Antonio Xara" + "v1.2")
 
 folder_path = os.getcwd()
 folder_path_saida = os.getcwd() + r'\resultado'
