@@ -1,9 +1,6 @@
 import os
-
 import PyPDF2
 from pypdf import PdfMerger
-
-import win32api
 from os import system
 
 system("title " + "Antonio Xara" + "v1.1")
