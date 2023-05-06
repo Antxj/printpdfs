@@ -1,7 +1,8 @@
-pip==22.3.1
+pip==23.1.2
 pypdf2==3.0.1
-setuptools==65.5.1
-wheel==0.38.4
+setuptools==67.7.2
+wheel==0.40.0
 pyinstaller
 pypiwin32~=223
 pywin32~=306
+pypdf~=3.8.1

@@ -1,13 +1,12 @@
 import os
 
 import PyPDF2
-from PyPDF2 import PdfFileMerger
 from pypdf import PdfMerger
 
 import win32api
 from os import system
 
-system("title " + "Antonio Xara")
+system("title " + "Antonio Xara" + "v1.1")
 
 folder_path = os.getcwd()
 folder_path_saida = os.getcwd() + r'\resultado'
@@ -46,7 +45,7 @@ for filename in os.listdir(folder_path):
 
 print('Pronto, o arquivo compilado foi criado!')
 
-confirmation = input('Pressione qualquer tecla para encerrar...')
-quit()
+# confirmation = input('Pressione qualquer tecla para encerrar...')
+# quit()
 
 # pyinstaller --onefile --clean --name PDF-Print-1-Page main.py
