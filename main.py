@@ -40,6 +40,13 @@ for filename in os.listdir(folder_path):
         merger.write("1-RESULTADO.pdf")
         merger.close()
 
+
+for qq in pdfs_to_merge:
+    print(qq)
+    os.remove(f'{qq}')
+
+
+
 print(f'Arquivos processados com sucesso: {count}')
 
                 # print(f'Arquivo enviado para impressão: {output_filename}')
