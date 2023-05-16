@@ -15,7 +15,7 @@ count = 0
 
 for filename in os.listdir(folder_path):
     if filename.endswith(".pdf"):
-        count = count +1
+        count = count + 1
 
         filepath = os.path.join(folder_path, filename)
         with open(filepath, "rb") as f:
