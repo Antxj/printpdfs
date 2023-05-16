@@ -1,4 +1,6 @@
 import os
+import time
+
 import PyPDF2
 from pypdf import PdfMerger
 from os import system
@@ -9,9 +11,11 @@ folder_path = os.getcwd()
 folder_path_saida = os.getcwd() + r'\resultado'
 
 pdfs_to_merge = []
+count = 0
 
 for filename in os.listdir(folder_path):
     if filename.endswith(".pdf"):
+        count = count +1
 
         filepath = os.path.join(folder_path, filename)
         with open(filepath, "rb") as f:
@@ -22,6 +26,7 @@ for filename in os.listdir(folder_path):
 
             output_filename = "pag1_" + os.path.splitext(filename)[0] + ".pdf"
             output_filepath = os.path.join(folder_path, output_filename)
+            print(f'Processando o arquivo: {filename}')
 
             with open(output_filepath, "wb") as out_f:
                 pdf_writer = PyPDF2.PdfWriter()
@@ -35,14 +40,12 @@ for filename in os.listdir(folder_path):
         merger.write("1-RESULTADO.pdf")
         merger.close()
 
+print(f'Arquivos processados com sucesso: {count}')
 
                 # print(f'Arquivo enviado para impressão: {output_filename}')
                 # win32api.ShellExecute(0, "print", output_filepath, None, ".", 0)
 
-
-print('Pronto, o arquivo compilado foi criado!')
-
 # confirmation = input('Pressione qualquer tecla para encerrar...')
 # quit()
 
-# pyinstaller --onefile --clean --name PDF-Print-1-Page main.py
+# pyinstaller --onefile --clean --name PDF Print 1-Page main.py
