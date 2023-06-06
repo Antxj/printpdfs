@@ -40,3 +40,4 @@ for file_path in pdfs_to_merge:
 print(f'Arquivos processados com sucesso: {count}')
 
 # pyinstaller --onefile --clean --name PDF-Print-1-Page main.py
+
