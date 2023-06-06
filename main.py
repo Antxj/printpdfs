@@ -27,6 +27,8 @@ for filename in os.listdir(folder_path):
                 pdf_writer.write(out_f)
         pdfs_to_merge.append(output_filepath)
 
+print('Compilando arquivo final, aguarde...')
+
 merger = PdfMerger()
 for pdf in pdfs_to_merge:
     merger.append(pdf)
@@ -38,9 +40,5 @@ for file_path in pdfs_to_merge:
     os.remove(file_path)
 
 print(f'Arquivos processados com sucesso: {count}')
-
-# Tela para fechar o programa
-confirmation = input('Pressione qualquer tecla para encerrar...')
-quit()
 
 # pyinstaller --onefile --clean --name PDF-Print-1-Page main.py
