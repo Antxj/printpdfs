@@ -1,6 +1,9 @@
 import os
 import PyPDF2
 from PyPDF2 import PdfMerger
+from os import system
+
+system("title " + "Antonio Xara" + "v1.3")
 
 folder_path = os.getcwd()
 folder_path_saida = os.getcwd() + r'\resultado'
