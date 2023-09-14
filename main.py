@@ -3,7 +3,7 @@ import PyPDF2
 from PyPDF2 import PdfMerger
 from os import system
 
-system("title " + "Antonio Xara" + " v1.3")
+system("title " + "Antonio Xara" + " v1.4")
 
 folder_path = os.getcwd()
 folder_path_saida = os.path.join(os.getcwd(), 'resultado')
@@ -39,5 +39,5 @@ for file_path in pdfs_to_merge:
 
 print(f'Arquivos processados com sucesso: {count}')
 
-# pyinstaller --onefile --clean --icon=icon.ico --name PDF-Print-1-Page main.py
+# pyinstaller --onefile --clean --icon=icon.ico --name PDF-Print-Page1 main.py
 

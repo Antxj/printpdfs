@@ -1,2 +1,2 @@
-pyinstaller==5.13.0
+pyinstaller==5.13.2
 pypdf2~=3.0.1
